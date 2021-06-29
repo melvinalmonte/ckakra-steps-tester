@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import { Button, VStack } from "@chakra-ui/react";
 import { Step, Steps } from "chakra-ui-steps";
 import confetti from "canvas-confetti";
@@ -14,19 +13,21 @@ function App() {
     {
       label: (
         <Button
-          onClick={() =>
-            increase === 4 &&
-            confetti({
-              particleCount: 100,
-              startVelocity: 30,
-              spread: 360,
-              origin: {
-                x: Math.random(),
-                // since they fall down, start a bit higher than random
-                y: Math.random() - 0.2,
-              },
-            })
-          }
+          onClick={() => {
+            if (increase === 4) {
+              for (let i = 0; i < 5; i++) {
+                confetti({
+                  particleCount: 100,
+                  startVelocity: 30,
+                  spread: 360,
+                  origin: {
+                    x: Math.random(),
+                    y: Math.random() - 0.2,
+                  },
+                });
+              }
+            }
+          }}
         >
           {increase === 4
             ? "All steps completed! click to celebrate!"
