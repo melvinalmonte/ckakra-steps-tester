@@ -29,7 +29,7 @@ function App() {
           }
         >
           {increase === 4
-            ? "All steps completed! Celebrate!"
+            ? "All steps completed! click to celebrate!"
             : "A Button in the step!"}
         </Button>
       ),
