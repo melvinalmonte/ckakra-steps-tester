@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Button, Text, VStack } from "@chakra-ui/react";
+import { Button, VStack } from "@chakra-ui/react";
 import { Step, Steps } from "chakra-ui-steps";
 import confetti from "canvas-confetti";
 
